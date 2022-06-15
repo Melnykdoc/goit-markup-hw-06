@@ -653,6 +653,45 @@
                         <use href="./images/icon-defs.svg#icon-close"></use>
                     </svg>
                 </button>
+                <p class="modal-title">
+                    Оставьте свои данные, мы вам перезвоним
+                </p>
+                <form>
+                    <label for="name" class="modal-label"
+                        >Имя<input
+                            type="name"
+                            name="name"
+                            id="name"
+                            class="modal-input"
+                    /></label>
+                    <label for="tel" class="modal-label"
+                        >Телефон
+                        <input
+                            type="tel"
+                            name="tel"
+                            id="tel"
+                            class="modal-input"
+                    /></label>
+                    <label for="email" class="modal-label"
+                        >Почта
+                        <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            class="modal-input"
+                    /></label>
+                    <label for="comment"
+                        >Комментарий
+                        <textarea
+                            name="comment"
+                            id="comment"
+                            placeholder="Введите текс"
+                            class="modal-comment"
+                        ></textarea>
+                    </label>
+
+                    <button class="btn-input" type="submit">Отправить</button>
+                </form>
             </div>
         </div>
         <script src="./js/modal.js"></script>

@@ -517,6 +517,8 @@ body {
 .form-mail {
     width: 358px;
     height: 50px;
+    font-size: 18px;
+    padding-left: 20px;
     margin-right: 12px;
     background-color: var(--background-footer);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -525,7 +527,6 @@ body {
     color: var(--title-color);
 }
 .form-mail::placeholder {
-    padding-left: 16px;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.25;
@@ -683,17 +684,19 @@ body {
     position: absolute;
     bottom: 50%;
     right: 50%;
-    transform: translate(50%, 50%) scale(1.25);
-    transition: transform 2550ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translate(50%, 50%) scale(1);
+    transition: transform 950ms cubic-bezier(0.4, 0, 0.2, 1);
     width: 528px;
     height: 581px;
+    padding: 40px 39px 40px 41px;
     background: var(--primary-btn-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 }
 .backdrop.is-hidden .modal {
-    transform: translate(50%, 50%) scale(-1);
+    transform: translate(50%, 50%) scale(15);
+    transition: transform 950ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn {
@@ -707,15 +710,72 @@ body {
     border-radius: 50%;
 }
 .modal-icon {
-    fill: lawngreen;
+    fill: var(--accent-color);
     width: 100%;
     height: 100%;
 }
-.modal-close-btn:hover {
+.modal-close-btn:hover .modal-icon {
+    fill: var(--primary-btn-color);
+}
+.modal-close-btn:focus .modal-icon {
+    fill: var(--primary-btn-color);
+}
+.modal-close-btn:hover,
+.modal-close-btn:focus {
     background-color: var(--background-primary-btn);
 }
 .is-hidden {
     opacity: 0.5;
     visibility: hidden;
     pointer-events: none;
+}
+.modal-title {
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--second-title-color);
+}
+.modal-input {
+    width: 448px;
+    height: 40px;
+    margin-bottom: 28px;
+    padding-left: 42px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
+.modal-label .modal-comment {
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+}
+.modal-comment {
+    width: 448px;
+    height: 120px;
+    padding: 12px 16px;
+    resize: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
+.modal-comment::placeholder {
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+}
+.btn-input {
+    width: 200px;
+    height: 50px;
+    background: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: var(--primary-btn-color);
 }
