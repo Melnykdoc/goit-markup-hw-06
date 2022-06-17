@@ -1,4 +1,4 @@
-input,
+
 button,
 textarea {
     font: inherit;
@@ -730,7 +730,7 @@ body {
     pointer-events: none;
 }
 .modal-title {
-    margin-bottom: 30px;
+    margin-bottom: 12px;
     font-weight: 700;
     font-size: 20px;
     line-height: 1.15;
@@ -765,6 +765,36 @@ body {
     line-height: 1.14;
     letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
+}
+.check-text {
+    display: flex;
+}
+/* .check-text::before {
+    content: '';
+    width: 16px;
+    height: 15px;
+    margin-right: 8px;
+    border: 2px solid #212121;
+    border-radius: 3px;
+}
+.modal-check:checked + .check-text::before {
+    background-color: var(--accent-color);
+    border: none;
+} */
+.check-text span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+        height: 15px;
+        margin-right: 8px;
+        border: 2px solid #212121;
+        border-radius: 3px;
+}
+.agree-icon {stroke: #212121;
+    fill: var(--accent-color);
+    width: 16px;
+    height: 15px;
 }
 .btn-input {
     width: 200px;
