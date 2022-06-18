@@ -71,10 +71,16 @@ body {
     padding-bottom: 94px;
 }
 .hidden-title {
+    position: absolute;
+    white-space: nowrap;
     width: 1px;
     height: 1px;
     overflow: hidden;
+    border: 0;
+    padding: 0;
     opacity: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
     margin: -1px;
 }
 /* HEADER!!!!!!!!!!!!!!!!!! */
@@ -546,7 +552,6 @@ body {
     letter-spacing: 0.06em;
     color: var(--primary-btn-color);
     background: #2196f3;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     transition-property: background-color;
     transition-duration: 250ms;
@@ -559,6 +564,7 @@ body {
 }
 .btn-form:hover {
     background-color: var(--add-accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* PORTFOLIO!!!!!!!!!! */
@@ -687,7 +693,6 @@ body {
     transform: translate(50%, 50%) scale(1);
     transition: transform 950ms cubic-bezier(0.4, 0, 0.2, 1);
     width: 528px;
-    height: 581px;
     padding: 40px 39px 40px 41px;
     background: var(--primary-btn-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -747,6 +752,14 @@ body {
    padding-left: 42px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+    outline: none;
+}
+.modal-input:focus {
+    border-color: var(--accent-color);
+    outline: var(--accent-color);
+}
+.modal-input:focus + .form-icon {
+    fill: var(--accent-color);
 }
 .modal-label .modal-comment {
     font-size: 12px;
@@ -768,19 +781,8 @@ body {
 }
 .check-text {
     display: flex;
+    margin-bottom: 30px;
 }
-/* .check-text::before {
-    content: '';
-    width: 16px;
-    height: 15px;
-    margin-right: 8px;
-    border: 2px solid #212121;
-    border-radius: 3px;
-}
-.modal-check:checked + .check-text::before {
-    background-color: var(--accent-color);
-    border: none;
-} */
 .check-text span {
     display: flex;
     align-items: center;
@@ -791,25 +793,50 @@ body {
         border: 2px solid #212121;
         border-radius: 3px;
 }
+.modal-check:checked + .check-text span {
+    background-color: var(--accent-color);
+    border: none;
+}
+.modal-check:checked+.check-text .agree-icon {
+    fill: var(--primary-btn-color);
+    stroke: var(--primary-btn-color);
+}
 .agree-icon {stroke: #212121;
-    fill: var(--accent-color);
+    fill: transparent;
+    stroke: transparent;
     width: 16px;
     height: 15px;
 }
 .btn-input {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
     width: 200px;
     height: 50px;
     background: var(--accent-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
     border-radius: 4px;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
-    display: flex;
-    align-items: center;
-    text-align: center;
     letter-spacing: 0.06em;
     color: var(--primary-btn-color);
+    border: none;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing-function);
+}
+.agree-link {
+    display: inline-block;
+    color: var(--accent-color);
+    text-decoration: underline;
+    padding-left: 2px;
+}
+.btn-input:hover,
+.btn-input:focus {
+    background-color: var(--add-accent-color);
+    color: var(--primary-btn-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .input-wrap {
     position: relative;
