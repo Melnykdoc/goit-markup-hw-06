@@ -658,46 +658,84 @@
                 </p>
                 <form>
                     <div class="modal-field">
-                    <label for="name" class="modal-label">Имя</label>
-                    <div class="input-wrap">
-                        <input type="name" name="name" id="name" class="modal-input" />
-                        <svg class="form-icon"><use href="./images/icon-defs.svg#icon-person"></use></svg>
-                    </div>
-                       </div>
-                        <div class="modal-field">
-                            <label for="tel" class="modal-label">Телефон</label>
-                            <div class="input-wrap">
-                                <input type="tel" name="tel" id="tel" class="modal-input" />
-                                <svg class="form-icon">
-                                    <use href="./images/icon-defs.svg#icon-phone-1"></use>
-                                </svg>
-                            </div>
-                            </div>
-                            <div class="modal-field">
-                                <label for="email" class="modal-label">Почта</label>
-                                <div class="input-wrap">
-                                    <input type="email" name="email" id="email" class="modal-input" />
-                                    <svg class="form-icon">
-                                        <use href="./images/icon-defs.svg#icon-email-1"></use>
-                                    </svg>
-                                </div>
-                           
-                            </div>
-                    <div class="modal-field">
-                        <label for="comment">Комментарий</label>
-                        <textarea name="comment" id="comment" placeholder="Введите текс" class="modal-comment"></textarea>
+                        <label for="name" class="modal-label">Имя</label>
+                        <div class="input-wrap">
+                            <input
+                                type="text"
+                                name="name"
+                                id="name"
+                                class="modal-input"
+                            />
+                            <svg class="form-icon">
+                                <use
+                                    href="./images/icon-defs.svg#icon-person"
+                                ></use>
+                            </svg>
+                        </div>
                     </div>
                     <div class="modal-field">
-                        <input type="checkbox" name="agree" id="agree" class="modal-check hidden-title">
+                        <label for="tel" class="modal-label">Телефон</label>
+                        <div class="input-wrap">
+                            <input
+                                type="tel"
+                                name="tel"
+                                id="tel"
+                                class="modal-input"
+                            />
+                            <svg class="form-icon">
+                                <use
+                                    href="./images/icon-defs.svg#icon-phone-1"
+                                ></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="modal-field">
+                        <label for="mail" class="modal-label">Почта</label>
+                        <div class="input-wrap">
+                            <input
+                                type="email"
+                                name="mail"
+                                id="mail"
+                                class="modal-input"
+                            />
+                            <svg class="form-icon">
+                                <use
+                                    href="./images/icon-defs.svg#icon-email-1"
+                                ></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="comment-field">
+                        <label class="modal-label" for="comment"
+                            >Комментарий</label
+                        >
+                        <textarea
+                            name="comment"
+                            id="comment"
+                            placeholder="Введите текс"
+                            class="modal-comment"
+                        ></textarea>
+                    </div>
+                    <div class="agree-box">
+                        <input
+                            type="checkbox"
+                            name="agree"
+                            id="agree"
+                            class="modal-check hidden-title"
+                        />
                         <label for="agree" class="check-text">
                             <span>
                                 <svg class="agree-icon">
-                                    <use href="./images/modal-defs-min.svg#icon-Vector-min"></use>
+                                    <use
+                                        href="./images/modal-defs-min.svg#icon-Vector-min"
+                                    ></use>
                                 </svg>
                             </span>
-                            Соглашаюсь c рассылкой и принимаю  <a class="agree-link" href=""> Условия договора</a> </label>
+                            Соглашаюсь c рассылкой и принимаю
+                            <a class="agree-link" href=""> Условия договора</a>
+                        </label>
                     </div>
-                   <button class="btn-input" type="submit">Отправить</button>
+                    <button class="btn-input" type="submit">Отправить</button>
                 </form>
             </div>
         </div>
